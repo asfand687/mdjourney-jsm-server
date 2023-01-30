@@ -7,7 +7,7 @@ dotenv.config()
 const router = express.Router()
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: "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"
 })
 
 const openai = new OpenAIApi(configuration)
@@ -24,7 +24,7 @@ router.route('/').post(async (req, res) => {
       prompt,
       n: 1,
       size: '1024x1024',
-      resposne_format: 'b64_json',
+      response_format: 'b64_json',
     })
 
     const image = aiResponse.data.data[0].b64_json
