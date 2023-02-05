@@ -1,6 +1,6 @@
 import express from 'express'
 import * as dotenv from 'dotenv'
-import { v2 as cloudnary } from 'cloudinary'
+import { v2 as cloudinary } from 'cloudinary'
 
 import Post from '../models/post.js'
 
@@ -21,7 +21,8 @@ router.route('/').get(async (req, res) => {
 
 // CREATE A POST
 router.route('/').post(async (req, res) => {
-
+  const { name, prompt, photo } = req.body
+  const photoUrl = await cloudinary.uploader.upload(photo)
 })
 
 export default router
