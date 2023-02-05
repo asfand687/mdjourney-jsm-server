@@ -19,4 +19,9 @@ router.route('/').get(async (req, res) => {
 
 })
 
+// CREATE A POST
+router.route('/').post(async (req, res) => {
+
+})
+
 export default router
