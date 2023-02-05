@@ -14,4 +14,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
+// GET ALL POSTS
+router.route('/').get(async (req, res) => {
+
+})
+
 export default router
